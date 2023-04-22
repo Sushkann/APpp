@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP.Views.CreateLoginPage">
+
+
+    <StackLayout>
+        <Label Text="Регистрация" TextColor="Black" FontSize="40" HorizontalTextAlignment="Center" Margin="15,35,15,15" FontFamily="Metropolis"/>
+
+
+        <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False" WidthRequest="350 " HeightRequest="20" Margin="15,15,15,0">
+            <Entry HorizontalTextAlignment="Start" FontSize="14" PlaceholderColor="#b6b7b7" TextColor="Black" Placeholder="Имя" Margin="0,-30,0,-30"/>
+        </Frame>
+
+        <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False" WidthRequest="350 " HeightRequest="20" Margin="15,15,15,0">
+            <Entry HorizontalTextAlignment="Start" FontSize="14" PlaceholderColor="#b6b7b7" TextColor="Black" Placeholder="Email" Margin="0,-30,0,-30"/>
+        </Frame>
+
+        <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False" WidthRequest="350 " HeightRequest="20" Margin="15,15,15,0">
+            <Entry HorizontalTextAlignment="Start" FontSize="14" PlaceholderColor="#b6b7b7" TextColor="Black" Placeholder="Телефон" Margin="0,-30,0,-30"/>
+        </Frame>
+
+        <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False" WidthRequest="350 " HeightRequest="20" Margin="15,15,15,0">
+            <Entry HorizontalTextAlignment="Start" FontSize="14" PlaceholderColor="#b6b7b7" TextColor="Black" Placeholder="Ваш город" Margin="0,-30,0,-30"/>
+        </Frame>
+
+        <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False" WidthRequest="350 " HeightRequest="20" Margin="15,15,15,0">
+            <Entry HorizontalTextAlignment="Start" FontSize="14" PlaceholderColor="#b6b7b7" TextColor="Black" Placeholder="Введите пароль" Margin="0,-30,0,-30"/>
+        </Frame>
+
+        <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False" WidthRequest="350 " HeightRequest="20" Margin="15,15,15,0">
+            <Entry HorizontalTextAlignment="Start" FontSize="14" PlaceholderColor="#b6b7b7" TextColor="Black" Placeholder="Повторите пароль" Margin="0,-30,0,-30"/>
+        </Frame>
+
+
+        <Button Text="Зарегестрироваться" CornerRadius="30" Margin="30" BackgroundColor="#fc6011" Clicked="Button_Clicked"/>
+        <Label Text="У вас уже есть аккаунт?" HorizontalTextAlignment="Center" FontSize="17"/>
+        <Button Text="Войти" TextColor="#fc6011" BackgroundColor="White" FontSize="12" CornerRadius="30" Margin="105,15,105,15" Clicked="Button_Clicked_1"/>
+
+
+
+
+
+
+
+
+
+
+
+    </StackLayout>
+    
+    
+</ContentPage>

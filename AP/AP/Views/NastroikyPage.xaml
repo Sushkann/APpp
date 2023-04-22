@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP.Views.NastroikyPage"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             Title="Настройки"
+             >
+
+
+    <StackLayout>
+
+
+
+        <Button Text="Код-пароль"  HorizontalOptions="Start" BackgroundColor="White" TextColor="Black" Margin="45,0,15,15" FontFamily="Lobster" Clicked="Button_Clicked_2"/>
+        <ImageButton Source="zamok" Margin="15,-59,270,5" BackgroundColor="White" CornerRadius="1" HorizontalOptions="Start" />
+
+
+        <Button Text="Выбор языка" TextColor="Black" BackgroundColor="White" Margin="45,0,15,0" HorizontalOptions="Start" CornerRadius="15" Clicked="Button_Clic" FontFamily="Lobster"/>
+        <ImageButton Source="izik" Margin="15,-44,270,5" BackgroundColor="White" CornerRadius="1" HorizontalOptions="Start" />
+
+
+        <Button Text="Cчет по умолчанию"  HorizontalOptions="Start" BackgroundColor="White" TextColor="Black" Clicked="Button_Clicked" FontFamily="Lobster" Margin="45,0,15,0"/>
+        <ImageButton Source="izik" Margin="15,-44,270,5" BackgroundColor="White" CornerRadius="1" HorizontalOptions="Start" />
+
+        <Button Text="Период по умолчанию"  HorizontalOptions="Start" BackgroundColor="White" TextColor="Black" Clicked="Button_Cl" FontFamily="Lobster" Margin="45,0,15,0"/>
+        <ImageButton Source="kalkulator" Margin="15,-44,270,5" BackgroundColor="White" CornerRadius="1" HorizontalOptions="Start" />
+
+        <Button Text="Не округлять"  HorizontalOptions="Start" BackgroundColor="White" TextColor="Black" FontFamily="Lobster" Margin="45,0,15,0"/>
+        <ImageButton Source="obnulit" Margin="15,-44,270,5" BackgroundColor="White" CornerRadius="1" HorizontalOptions="Start" />
+        <Switch IsToggled="true" Margin="15,-35,15,5"/>
+
+
+        <Button Text="Выбор темы"  HorizontalOptions="Start" BackgroundColor="White" TextColor="Black" Clicked="Button_Clicked_1" FontFamily="Lobster" Margin="45,0,15,0"/>
+        <ImageButton Source="tema" Margin="15,-44,270,5" BackgroundColor="White" CornerRadius="1" HorizontalOptions="Start" />
+
+        <Button Text="Восстановить покупки"  HorizontalOptions="Start" BackgroundColor="White" TextColor="Black" FontFamily="Lobster" Margin="45,0,15,0"/>
+        <ImageButton Source="pok" Margin="15,-44,270,5" BackgroundColor="White" CornerRadius="1" HorizontalOptions="Start" />
+
+        <Button Text="Дополнительно"  HorizontalOptions="Start" BackgroundColor="White" TextColor="Black" FontFamily="Lobster" Margin="45,0,15,0" Clicked="Button_Clicked_3"/>
+        <ImageButton Source="dop" Margin="15,-44,270,5" BackgroundColor="White" CornerRadius="1" HorizontalOptions="Start" />
+
+        <Button Text="Удалить все данные "  HorizontalOptions="Start" BackgroundColor="White" TextColor="Red" FontFamily="Lobster" Margin="45,0,15,0" Clicked="Button_Clicked_4"/>
+        <ImageButton Source="zamok" Margin="15,-44,270,5" BackgroundColor="White" CornerRadius="1" HorizontalOptions="Start" />
+
+
+        <Image Source="Monky" HeightRequest="170" Margin="15,91,15,15"/>
+
+    </StackLayout>
+
+
+</ContentPage>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP.Views.ProfilePage"
+             Title="Профиль">
+
+
+
+    <Grid  BackgroundColor="White" Margin="15,15,15,15">
+        <StackLayout  HorizontalOptions="Center">
+            <Grid BackgroundColor="White" Margin="15,15,15,15" WidthRequest="400" HeightRequest="120">
+                <Frame CornerRadius="15">
+                    <Label Text="Обо мне" FontSize="Body" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" Margin="0,-15,0,0"/>
+                </Frame>
+                <Label Text="Александр Сушанин" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Body"/>
+                <Image Source="profile.png" Margin="15,35,270,25" />
+                <Button ImageSource="redact" BackgroundColor="White" HorizontalOptions="EndAndExpand" VerticalOptions="StartAndExpand" Margin="300,0,15,0"/>
+            </Grid>
+            <Button CornerRadius="15" Margin="15,0,15,0" BorderColor="Orange" BackgroundColor="white" BorderWidth="1" Text="Полный доступ аккаунта" TextColor="Black" FontSize="15"  FontAttributes="Bold"/>
+            <Frame BackgroundColor="NavajoWhite" CornerRadius="12" Margin="15,10,15,0">
+                <Button Text="Валюта расчета" BackgroundColor="NavajoWhite"  Margin="-160,-25,15,5"  TextColor="Black"  FontSize="12" FontAttributes="Bold"/>
+            </Frame>
+            <Label Text="Рубль (Россия)" Margin="245,-65,15,15"/>
+            <Frame BackgroundColor="NavajoWhite" CornerRadius="12" Margin="15,0,15,15">
+                <Button Text="Дни дохода" BackgroundColor="NavajoWhite" TextColor="Black" Margin="-185,-30,15,15" FontSize="12" FontAttributes="Bold"/>
+            </Frame>
+            <Line X1="340"
+                    Y1="5"
+                    X2="5"
+                    Y2="5"
+                    Stroke="black" Margin="25,-105,15,0" />
+            <Button ImageSource="strela" BackgroundColor="NavajoWhite" Margin="295,-5,15,25" HeightRequest="40"/>
+            <Line X1="340"
+                    Y1="5"
+                    X2="5"
+                    Y2="5"
+                    Stroke="black" Margin="25,-35,15,0" />
+            <Frame BackgroundColor="NavajoWhite" CornerRadius="12" Margin="15,0,15,0">
+                <Button Text="Настройка категорий" BackgroundColor="NavajoWhite" TextColor="Black" CornerRadius="12" Margin="-120,-30,15,15" FontSize="12" FontAttributes="Bold"/>
+            </Frame>
+            <Button ImageSource="strela" BackgroundColor="NavajoWhite" Margin="295,-70,15,25" HeightRequest="10"/>
+            <Button ImageSource="strela" BackgroundColor="NavajoWhite" Margin="295,-5,15,25" HeightRequest="15"/>
+            <Button Text="обратиться в поддержку" BackgroundColor="NavajoWhite" Margin="15,-65,130,25" TextColor="Black" FontSize="12" FontAttributes="Bold"/>
+            <Line X1="340"
+                    Y1="5"
+                    X2="5"
+                    Y2="5"
+                    Stroke="black" Margin="25,-75,15,0" />
+            <Frame Margin="15,50,15,15" CornerRadius="12" BackgroundColor="NavajoWhite">
+                <Button Text="очистить историю операций" TextColor="Red" BackgroundColor="NavajoWhite" HeightRequest="40" FontSize="12" FontAttributes="Bold" Margin="15,-15,15,25" />
+            </Frame>
+
+            <Button Text="выйти" TextColor="Black" BackgroundColor="NavajoWhite" HeightRequest="40" FontSize="12" FontAttributes="Bold" Margin="15,-62,15,0"/>
+            <Line X1="340"
+                    Y1="5"
+                    X2="5"
+                    Y2="5"
+                    Stroke="black" Margin="10,-53,15,0" />
+            <Frame  Margin="15,50,15,15" CornerRadius="12" BackgroundColor="NavajoWhite" >
+                <Button Text="удалить аккаунт" TextColor="Red" BackgroundColor="NavajoWhite" HeightRequest="40" FontSize="12" FontAttributes="Bold" Margin="15,-15,15,-15"/>
+            </Frame>
+            <!--<Frame CornerRadius="30" Background="#f2f2f2" WidthRequest="350" HeightRequest="20" Margin="10,10,10,80" >
+                <Entry Placeholder="text" Margin="0,-80,0,-80"/>
+            </Frame> -->
+            <!--<Frame  CornerRadius="30" Background="#f2f2f2" WidthRequest="350" HeightRequest="20" Margin="10,10,10,80">
+                <Entry Placeholder="Email"  Margin="0,-30,0,-30"/>
+            </Frame>
+            
+            <Frame  CornerRadius="30" Background="#f2f2f2" WidthRequest="350" HeightRequest="20" Margin="10,-75,10,0">
+                    <Entry Placeholder="Email"  Margin="0,-30,0,-30"/>
+                </Frame> -->
+        </StackLayout>
+    </Grid>
+
+
+
+
+</ContentPage>

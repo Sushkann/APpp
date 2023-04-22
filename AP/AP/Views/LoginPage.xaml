@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodels="clr-namespace:AP.ViewModels" x:DataType="viewmodels:LoginViewModel"
+             mc:Ignorable="d"
+             x:Class="AP.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+
+
+  
+    
+    
+    <Grid RowDefinitions="*,*">
+
+        <Image Source="Oregane.png" Aspect="AspectFill"/>
+        
+        <StackLayout Grid.Row="1">
+            
+            <Image Source="Monky.png" WidthRequest="130" Margin="0,-115,0,0"/>
+            <StackLayout HorizontalOptions="Center" Grid.Column="1" Orientation="Horizontal" Spacing="10">
+
+                <Label Text="AP" FontSize="34" FontFamily="Cabin" TextColor="Orange"/>
+                <Label Text="monkey" FontSize="34" FontFamily="Cabin" TextColor="#4a4b4d"/>
+
+            </StackLayout>
+
+            <Label Text="на черный день" FontSize="11" CharacterSpacing="5" WidthRequest="130" FontFamily="Metropolis" HorizontalOptions="Center" TextColor="#4a4b4d"/>
+            <Label Text="для полного доступа к приложению, авторизуйтесь" FontSize="11" CharacterSpacing="2" WidthRequest="130" FontFamily="Metropolis" HorizontalTextAlignment="Center" TextColor="#4a4b4d" Margin="27,40,27,60"/>
+            <Button Clicked="Button_Clicked" Text="Авторизация" BackgroundColor="Orange" WidthRequest="350" HeightRequest="55" HorizontalOptions="Center" CornerRadius="30" TextColor="White"/>
+            <Button Clicked="Button_Clicked_1" Text="Создать аккаунт" BackgroundColor="White" WidthRequest="350" HeightRequest="55" HorizontalOptions="Center" CornerRadius="30" TextColor="Orange" BorderWidth="1" BorderColor="Orange" Margin="0,5,0,0"/>
+        </StackLayout>
+        
+
+
+
+
+    </Grid>
+    
+        
+</ContentPage>

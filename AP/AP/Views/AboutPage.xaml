@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP.Views.AboutPage"
+             xmlns:vm="clr-namespace:AP.ViewModels" x:DataType="vm:AboutViewModel"
+             Title="Главная">
+
+
+
+
+    <ScrollView HeightRequest="3000">
+        <Grid>
+            
+            <Label Text="Мои деньги" HorizontalOptions="Start" VerticalOptions="Start" Margin="15" FontSize="15" FontAttributes="Bold"/>
+            <StackLayout>
+                <StackLayout>
+                    <ScrollView Orientation="Both">
+                        <Grid>
+                        <Frame HeightRequest="120" WidthRequest="320" BackgroundColor="NavajoWhite" Margin="15,55,15,15" CornerRadius="12">
+                    <Label Text="Доступно" FontAttributes="Bold"/>
+                </Frame>
+                            <Label Text="Основной" Margin="45,185,15,15"/>
+                            <Image Source="kohelek" HeightRequest="30" WidthRequest="30" Margin="25,-55,35,15" HorizontalOptions="End"/>
+
+
+                            <Frame HeightRequest="120" WidthRequest="150" BackgroundColor="Tomato" Margin="15,55,15,15" CornerRadius="12" Grid.Column="1">
+                                <Label Text="Доступно" FontAttributes="Bold"/>
+                            </Frame>
+
+                            <Entry Margin="115,65,115,0" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+                            <Label Text=":Руб" Margin="245,135,15,15" FontSize="17" FontAttributes="Bold"/>
+
+                            <Label Text="Сберегательный" Margin="45,185,15,15" Grid.Column="1"/>
+                            <Image Source="kohelek" HeightRequest="30" WidthRequest="30" Margin="25,-55,35,15" HorizontalOptions="End" Grid.Column="1"/>
+                            <Entry Margin="115,65,115,0" HorizontalTextAlignment="Center" Grid.Column="1" Keyboard="Numeric"/>
+                            <Label Text=":Руб" Margin="245,135,15,15" FontSize="17" FontAttributes="Bold" Grid.Column="1"/>
+
+
+                            <Frame HeightRequest="120" WidthRequest="150" BackgroundColor="WhiteSmoke" Margin="15,55,15,15" CornerRadius="12" Grid.Column="2">
+                                <Label Text="Доступно" FontAttributes="Bold"/>
+                            </Frame>
+                            <Label Text="Копилка" Margin="45,185,15,15" Grid.Column="2"/>
+                            <Image Source="kohelek" HeightRequest="30" WidthRequest="30" Margin="25,-55,35,15" HorizontalOptions="End" Grid.Column="2"/>
+
+                            <Entry Margin="115,65,115,0" HorizontalTextAlignment="Center" Grid.Column="2" Keyboard="Numeric"/>
+                            <Label Text=":Руб" Margin="245,135,15,15" FontSize="17" FontAttributes="Bold" Grid.Column="2"/>
+
+                        </Grid>
+                    </ScrollView>
+                </StackLayout>
+
+
+                
+                <Label Text="Если нужны деньги" FontSize="20" FontAttributes="Bold" Margin="15,15,15,15"/>
+                <Grid Margin="20,15,20,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200.5"/>
+                        <ColumnDefinition Width="200.5"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="0"/>
+                    </Grid.RowDefinitions>
+                    <Frame Margin="5,-25,25,-10" CornerRadius="12" BackgroundColor="White" BorderColor="Orange" >
+                        <Button ImageSource="frec" BackgroundColor="White" Margin="15,0,15,35" Clicked="Button_Clicked"/>
+                    </Frame>
+                    <Label Text="Рассчитать кредит" Margin="30,50,15,5" FontAttributes="Bold"/>
+                    <Frame Margin="185,-25,-155,-10" CornerRadius="12" BackgroundColor="White" BorderColor="Orange" >
+                        <Button ImageSource="cred" BackgroundColor="White" Margin="15,0,15,35" Grid.Column="1" Clicked="Button_Clicked_1"/>
+                    </Frame>
+                    <Label Text="Выгодные кредитки" Grid.Row="2" Grid.Column="1" Margin="0,-40,15,5" FontAttributes="Bold"/>
+                </Grid>
+                <Label Text="Увеличить капитал" Margin="15,-20,15,15" FontSize="20" FontAttributes="Bold"/>
+                <Grid Margin="20,15,20,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200.5"/>
+                        <ColumnDefinition Width="200.5"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="0"/>
+                    </Grid.RowDefinitions>
+                    <Frame Margin="5,-25,25,-10" CornerRadius="12" BackgroundColor="White" BorderColor="Orange" >
+                        <Button ImageSource="pif" BackgroundColor="White" Margin="15,0,15,35" Clicked="Button_Clicked_2"/>
+                    </Frame>
+                    <Label Text="Витрина ПИФов" Margin="35,50,15,5" FontAttributes="Bold"/>
+                    <Frame Margin="185,-25,-155,-10" CornerRadius="12" BackgroundColor="White" BorderColor="Orange" >
+                        <Button ImageSource="kop" BackgroundColor="White" Margin="15,0,15,35" Grid.Column="1" Clicked="Button_Clicked_3"/>
+                    </Frame>
+                    <Label Text="Выгодные вклады" Grid.Row="2" Grid.Column="1" Margin="0,-40,15,5" FontAttributes="Bold"/>
+                </Grid>
+                <Grid Margin="20,15,20,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200.5"/>
+                        <ColumnDefinition Width="200.5"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="0"/>
+                    </Grid.RowDefinitions>
+                    <Frame Margin="5,-25,25,-10" CornerRadius="12" BackgroundColor="White" BorderColor="Orange" >
+                        <Button ImageSource="raketa" BackgroundColor="White" Margin="15,0,15,35" Clicked="Button_Clicked_4"/>
+                    </Frame>
+                    <Label Text="Правила инвестиций" Margin="25,50,15,5" FontAttributes="Bold"/>
+                    <Frame Margin="185,-25,-155,-10" CornerRadius="12" BackgroundColor="White" BorderColor="Orange" >
+                        <Button ImageSource="invest" BackgroundColor="White" Margin="15,0,15,35" Grid.Column="1" Clicked="Button_Clicked_5"/>
+                    </Frame>
+                    <Label Text="Учет инвестиций" Grid.Row="2" Grid.Column="1" Margin="0,-40,15,5" FontAttributes="Bold"/>
+                </Grid>
+                <Label Text="Курсы" Margin="15,-15,15,15" FontAttributes="Bold" FontSize="20"/>
+                <ScrollView Orientation="Both" Margin="5,-5,15,5">
+                    <Grid Margin="20,5,0,20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150.5"/>
+                            <ColumnDefinition Width="150.5"/>
+                            <ColumnDefinition Width="150.5"/>
+                            <ColumnDefinition Width="150.5"/>
+                            <ColumnDefinition Width="150.5"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="140"/>
+                            <RowDefinition Height="0"/>
+                        </Grid.RowDefinitions>
+                        <Frame Margin="5,-25,25,-10" CornerRadius="25" BackgroundColor="White" BorderColor="Black"  >
+                            <Button ImageSource="fon2" BackgroundColor="White"  Margin="15,10,15,0" WidthRequest="220" HeightRequest="320" Clicked="Button_Clicked_6"/>
+                        </Frame>
+                        <Label Text="Правила Инвестиций" TextColor="Black" Margin="15,90,15,5" FontAttributes="None"/>
+                        <Frame Margin="145,-25,-115,-10" CornerRadius="25" BackgroundColor="White" BorderColor="Orange" >
+                            <Button ImageSource="fon3" BackgroundColor="White" Margin="15,0,15,0" Grid.Column="1" Clicked="Button_Clicked_7"/>
+                        </Frame>
+                        <Label Text="Все популярные курсы" Grid.Row="2" Grid.Column="1" Margin="-5,-60,15,5" FontAttributes="None" TextColor="Black"/>
+                        <Frame  CornerRadius="25" BackgroundColor="White" BorderColor="Orange" Grid.Column="2" Margin="-25,-15,50,-10" >
+                            <Button ImageSource="fon1" BackgroundColor="White" Margin="15,0,15,35" Grid.Column="2" Clicked="Button_Clicked_8"/>
+                        </Frame>
+                        <Label Text="Личный финансовый план" Grid.Row="2" Grid.Column="2" Margin="-15,-60,55,5" FontAttributes="None" TextColor="Black"/>
+                        <Frame  CornerRadius="25" BackgroundColor="White" BorderColor="Orange" Grid.Column="3" Margin="-35,-15,70,-10" >
+                            <Button ImageSource="fon"  BackgroundColor="White" Margin="15,0,15,35" Grid.Column="3" Clicked="Button_Clicked_9"/>
+                        </Frame>
+                        <Label Text="Финансовая грамотность" Grid.Row="2" Grid.Column="3" FontAttributes="None" TextColor="Black" Margin="-25,-60,25,5"/>
+                        <Frame  CornerRadius="25" BackgroundColor="White" BorderColor="Orange" Grid.Column="3" Margin="100,-15,-70,-10" >
+                            <Button ImageSource="fon1" BackgroundColor="White" Margin="15,0,15,10" Grid.Column="4" Clicked="Button_Clicked_10"/>
+                        </Frame>
+                        <Label Text="Свобода от долгов" Grid.Row="2" Grid.Column="4" FontAttributes="None" TextColor="Black" Margin="-45,-60,80,-10"/>
+                    </Grid>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
+    

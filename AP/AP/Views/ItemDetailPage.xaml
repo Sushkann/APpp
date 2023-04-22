@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:AP.ViewModels" x:DataType="viewmodels:ItemDetailViewModel"
+             x:Class="AP.Views.ItemDetailPage"
+             Title="Редактирование">
+
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="Тема:" FontSize="Medium" FontAttributes="Bold" />
+        <Label Text="{Binding Text}" FontSize="Small"/>
+        <Label Text="Описание:" FontSize="Medium" />
+        <Label Text="{Binding Description}" FontSize="Small"/>
+        <Label Text="Дата окончания :" FontSize="Medium" />
+        <Label Text="{Binding Date}" FontSize="Small"/>
+        <Label Text="Важность:" FontSize="Medium" />
+        <Label Text="{Binding Importance}" FontSize="Small"/>
+    </StackLayout>
+    
+</ContentPage>

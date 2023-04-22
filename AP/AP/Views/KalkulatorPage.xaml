@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:AP.ViewModels" x:DataType="viewmodels:ItemDetailViewModel"
+             x:Class="AP.Views.KalkulatorPage"
+             Title="Калькулятор">
+
+    <StackLayout VerticalOptions="End">
+        <Label x:Name="Main_number_add" HorizontalTextAlignment="End" FontSize="40" Text="" TextColor="White"></Label>
+        <Label HeightRequest="20"></Label>
+        <Label  x:Name="second_number_add" HorizontalTextAlignment="End" FontSize="30" Text="" TextColor="#C0C0C0"></Label>
+        <Label HeightRequest="60"></Label>
+        <Button WidthRequest="60" HeightRequest="60" Text="⌫" FontSize="25" HorizontalOptions="End" BackgroundColor="Transparent" Clicked="back_clicked"></Button>
+        <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <StackLayout HorizontalOptions="CenterAndExpand" >
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="clear_btn" WidthRequest="195" HeightRequest="40" Text="C" FontSize="25" TextColor="White" Clicked="buttons_clicked" BackgroundColor="OrangeRed" CornerRadius="17"></Button>
+                    <Button x:Name="bracket_btn" WidthRequest="95" HeightRequest="70" Text="( )" FontSize="25" TextColor="White" Clicked="buttons_clicked" BackgroundColor="Orange" CornerRadius="17"></Button>
+                    <Button x:Name="div_btn"  WidthRequest="85" HeightRequest="40" Text="÷" FontSize="25" TextColor="White" Clicked="buttons_clicked" BackgroundColor="Orange" CornerRadius="17"></Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="seven_btn"  WidthRequest="95" HeightRequest="70" Text="7" FontSize="25" Clicked="buttons_clicked" BackgroundColor="Gray" CornerRadius="17"></Button>
+                    <Button x:Name="eight_btn"  WidthRequest="95" HeightRequest="70" Text="8" FontSize="25" Clicked="buttons_clicked"  BackgroundColor="Gray" CornerRadius="17"></Button>
+                    <Button x:Name="nine_btn"  WidthRequest="95" HeightRequest="70" Text="9" FontSize="25" Clicked="buttons_clicked"  BackgroundColor="Gray" CornerRadius="17"></Button>
+                    <Button x:Name="multi_btn"  WidthRequest="85" HeightRequest="40" Text="×" FontSize="25" TextColor="White" Clicked="buttons_clicked" BackgroundColor="Orange" CornerRadius="17"></Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="four_btn"  WidthRequest="95" HeightRequest="70" Text="4" FontSize="25" Clicked="buttons_clicked"  BackgroundColor="Gray" CornerRadius="17"></Button>
+                    <Button x:Name="five_btn"  WidthRequest="95" HeightRequest="70" Text="5" FontSize="25" Clicked="buttons_clicked"  BackgroundColor="Gray" CornerRadius="17"></Button>
+                    <Button x:Name="six_btn"  WidthRequest="95" HeightRequest="70" Text="6" FontSize="25" Clicked="buttons_clicked"  BackgroundColor="Gray" CornerRadius="17"></Button>
+                    <Button x:Name="subtract_btn"  WidthRequest="85" HeightRequest="40" Text="-" FontSize="25" TextColor="White" Clicked="buttons_clicked" BackgroundColor="Orange" CornerRadius="17"></Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="one_btn"  WidthRequest="95" HeightRequest="70" Text="1" FontSize="25" Clicked="buttons_clicked"  BackgroundColor="Gray" CornerRadius="17"></Button>
+                    <Button x:Name="two_btn"  WidthRequest="95" HeightRequest="70" Text="2" FontSize="25" Clicked="buttons_clicked"  BackgroundColor="Gray" CornerRadius="17"></Button>
+                    <Button x:Name="three_btn"  WidthRequest="95" HeightRequest="70" Text="3" FontSize="25" Clicked="buttons_clicked"  BackgroundColor="Gray" CornerRadius="17"></Button>
+                    <Button x:Name="add_btn"  WidthRequest="85" HeightRequest="40" Text="+" FontSize="25" TextColor="White" Clicked="buttons_clicked" BackgroundColor="Orange" CornerRadius="17"></Button>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="dot_btn"  WidthRequest="95" HeightRequest="70" Text="." FontSize="25" Clicked="buttons_clicked"  BackgroundColor="Gray" CornerRadius="17"></Button>
+                    <Button x:Name="zero_btn"  WidthRequest="95" HeightRequest="70" Text="0" FontSize="25" Clicked="buttons_clicked"  BackgroundColor="Gray" CornerRadius="17"></Button>
+                    <Button x:Name="equal_btn"  WidthRequest="185" HeightRequest="70" Text="=" FontSize="35" BackgroundColor="Orange" TextColor="White" Clicked="buttons_clicked" CornerRadius="17"></Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+        <Label HeightRequest="60"></Label>
+    </StackLayout>
+
+</ContentPage>

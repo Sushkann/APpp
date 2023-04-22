@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP.Views.RasxodPage"
+              Title="Добавление операции">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame Margin="-15,-15,-15,20"
+               BorderColor="NavajoWhite"
+               CornerRadius="180"
+               HeightRequest="40"
+               WidthRequest="420"
+               IsClippedToBounds="True"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+               BackgroundColor="NavajoWhite">
+            </Frame>
+            <Label Text="Расходы" HorizontalTextAlignment="Center" Margin="30,-70,30,30" FontSize="Medium" FontAttributes="Bold"  TextDecorations="Underline" TextColor="Black"/>
+
+            <Entry Margin="135,0,135,15" Placeholder="0" HorizontalTextAlignment="Center" Keyboard="Numeric"/>
+            <Button Text="Руб" Margin="255,-65,75,15" CornerRadius="25" BackgroundColor="White" TextColor="Black" Clicked="Button_Clicked"/>
+            <Button ImageSource="kalkulator" BackgroundColor="White" Margin="315,-70,15,15" CornerRadius="25" Clicked="Button_Clicked_1"/>
+
+            <StackLayout>
+                <Label x:Name="header" Text="Выбор счета:" FontSize="17" Margin="15"/>
+
+                <Frame CornerRadius="25" Margin="15,-15,15,0"  BorderColor="NavajoWhite">
+                    <Picker x:Name="picker" SelectedIndexChanged ="picker_SelectedIndexChanged" Margin="15,-21,15,-27"  HorizontalTextAlignment="Start" >
+                        <Picker.Items>
+                            <x:String>Основной</x:String>
+                            <x:String>Сберегательный</x:String>
+                            <x:String>Копилка</x:String>
+                            <x:String>Резервный</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Frame>
+
+                <Label Text="Категории:" FontSize="17" Margin="15,10,15,15"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="115"/>
+                        <ColumnDefinition Width="115"/>
+                        <ColumnDefinition Width="115"/>
+                        <ColumnDefinition Width="115"/>
+                        <ColumnDefinition Width="115"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="150"/>
+
+                    </Grid.RowDefinitions>
+
+
+                    <Frame Margin="20,-170,0,20"
+               BorderColor="Black"
+               CornerRadius="50"
+               HeightRequest="30"
+               WidthRequest="30"
+               IsClippedToBounds="True"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+                   Grid.Column="0"
+                   Grid.Row="3">
+                        <Button Margin="-20" ImageSource="avtobusd" BackgroundColor="CadetBlue" HeightRequest="80" WidthRequest="80" />
+                    </Frame>
+
+                    <Label Text="Транспорт" Grid.Column="0" Grid.Row="3" Margin="19,13,0,15"/>
+                    <Frame Margin="-5,-170,0,20"
+               BorderColor="Black"
+               CornerRadius="50"
+               HeightRequest="30"
+               WidthRequest="30"
+               IsClippedToBounds="True"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+                   Grid.Column="1"
+                   Grid.Row="3">
+                        <Button Margin="-20" ImageSource="sport" BackgroundColor="MediumSeaGreen" HeightRequest="80" WidthRequest="80" />
+                    </Frame>
+                    <Label Text="Спорт" Grid.Column="1" Grid.Row="3" Margin="10,13,15,15"/>
+                    <Frame Margin="-25,-170,0,20"
+               BorderColor="Black"
+               CornerRadius="50"
+               HeightRequest="30"
+               WidthRequest="30"
+               IsClippedToBounds="True"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+                   Grid.Column="2"
+                   Grid.Row="3">
+                        <Button Margin="-20" ImageSource="famaly" BackgroundColor="OrangeRed" HeightRequest="80" WidthRequest="80" />
+                    </Frame>
+                    <Label Text="Семья" Grid.Column="2" Grid.Row="3" Margin="-13,13,15,15"/>
+                    <Frame Margin="-50,-170,0,20"
+               BorderColor="Black"
+               CornerRadius="50"
+               HeightRequest="30"
+               WidthRequest="30"
+               IsClippedToBounds="True"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+                   Grid.Column="3"
+                   Grid.Row="3">
+                        <Button Margin="-20" ImageSource="product" BackgroundColor="AliceBlue" HeightRequest="80" WidthRequest="80" />
+                    </Frame>
+                    <Label Text="Продукты" Grid.Column="3" Grid.Row="3" Margin="-44,13,15,15"/>
+                    <Frame Margin="20,-130,0,20"
+               BorderColor="Black"
+               CornerRadius="50"
+               HeightRequest="30"
+               WidthRequest="30"
+               IsClippedToBounds="True"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+                   Grid.Column="0"
+                   Grid.Row="4">
+                        <Button Margin="-20" ImageSource="podarki" BackgroundColor="DarkCyan" HeightRequest="80" WidthRequest="80" />
+                    </Frame>
+                    <Label Text="Подарки" Grid.Column="0" Grid.Row="4" Margin="25,-40,15,15"/>
+
+                    <Frame Margin="-5,-130,0,20"
+               BorderColor="Black"
+               CornerRadius="50"
+               HeightRequest="30"
+               WidthRequest="30"
+               IsClippedToBounds="True"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+                   Grid.Column="1"
+                   Grid.Row="4">
+                        <Button Margin="-20" ImageSource="obrazovanie" BackgroundColor="LightPink" HeightRequest="80" WidthRequest="80" />
+                    </Frame>
+
+                    <Label Text="Образование" Grid.Column="1" Grid.Row="4" Margin="-12,-40,15,15"/>
+
+                    <Frame Margin="-25,-130,0,20"
+               BorderColor="Black"
+               CornerRadius="50"
+               HeightRequest="30"
+               WidthRequest="30"
+               IsClippedToBounds="True"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+                   Grid.Column="2"
+                   Grid.Row="4">
+                        <Button Margin="-20" ImageSource="kafe" BackgroundColor="DarkOrange" HeightRequest="80" WidthRequest="80" />
+                    </Frame>
+                    <Label Text="Кафе" Grid.Column="2" Grid.Row="4" Margin="-8,-40,15,15"/>
+                    <Frame Margin="-50,-130,0,20"
+               BorderColor="Black"
+               CornerRadius="50"
+               HeightRequest="30"
+               WidthRequest="30"
+               IsClippedToBounds="True"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+                   Grid.Column="3"
+                   Grid.Row="4">
+                        <Button Margin="-20" ImageSource="pl" BackgroundColor="PaleVioletRed" HeightRequest="80" WidthRequest="80" Clicked="Button_Clicked_2" />
+                    </Frame>
+                    <Label Text="Создать" Grid.Column="3" Grid.Row="4" Margin="-43,-40,15,15"/>
+
+
+                </Grid>
+
+                <Label Text="Выберити дату:" FontSize="17" Margin="15,10,15,0"/>
+                <DatePicker x:Name="datePicker" VerticalOptions="Center" HorizontalOptions="End" Margin="25,-38,15,15" />
+
+                <Label Text="Комментарий:" FontSize="17" Margin="15,0,15,0"/>
+                <Entry Placeholder="Комментарий" Margin="12,0,15,15"/>
+
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP.Views.HelpPage"
+             Title="Помощь">
+    
+        <StackLayout>
+
+     
+        <BoxView CornerRadius="0,0,332,332" Margin="0,0,0,0" HeightRequest="120" WidthRequest="120" Color="NavajoWhite"/>
+        <Label Text="Есть вопросы? Напишите нам!" Margin="15,-115,15,0" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="16"/>
+        <Frame Margin="20"
+               BorderColor="Black"
+               CornerRadius="50"
+               HeightRequest="60"
+               WidthRequest="60"
+               IsClippedToBounds="True"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+            <Button Margin="-20" ImageSource="icon_about" BackgroundColor="White" HeightRequest="100" WidthRequest="100"/>
+        </Frame>
+
+        <Label Text="Базовые функции:" Margin="15,-5,15,15" FontAttributes="Bold" FontSize="17"/>
+        <Grid Margin="15,-10,15,15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="180"/>
+                <RowDefinition Height="180"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180"/>
+                <ColumnDefinition Width="180"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame Margin="5" CornerRadius="15" BorderColor="NavajoWhite" BackgroundColor="AliceBlue">
+                <Button Text="Как войти в свой аккаунт?" TextColor="Black" BackgroundColor="AliceBlue" HorizontalOptions="Start" VerticalOptions="Center" Margin="0" FontSize="17" FontAttributes="None"/>
+            </Frame>
+
+            <Frame Grid.Column="1" Margin="5" CornerRadius="15" BorderColor="Orange" BackgroundColor="AliceBlue">
+                <Button Text="Как добавить / удалить счет?" TextColor="Black" BackgroundColor="AliceBlue" HorizontalOptions="Center" VerticalOptions="Center" Margin="0" FontSize="17" FontAttributes="None"/>
+             </Frame>
+
+            <Frame Grid.Row="1" Margin="5" CornerRadius="15" BorderColor="Orange" BackgroundColor="AliceBlue" >
+                <Button Text="Как создать/удалить категории?" TextColor="Black" BackgroundColor="AliceBlue" HorizontalOptions="Start" VerticalOptions="Center" Margin="0" FontSize="17" FontAttributes="None"/>
+            </Frame>
+
+            <Frame Grid.Column="1" Grid.Row="1" Margin="5" CornerRadius="15" BorderColor="NavajoWhite" BackgroundColor="AliceBlue">
+                <Button Text="Как списать        ,долги,?" TextColor="Black" BackgroundColor="AliceBlue" HorizontalOptions="Start" VerticalOptions="Center" Margin="0" FontSize="17" FontAttributes="None"/>
+            </Frame>
+            
+        </Grid>
+        <Frame Margin="15" CornerRadius="10" BackgroundColor="NavajoWhite">
+            <Button Text="Написать на почту" BackgroundColor="NavajoWhite" TextColor="Black" Margin="-20"/>
+        </Frame>
+
+
+
+    </StackLayout>
+    
+</ContentPage>

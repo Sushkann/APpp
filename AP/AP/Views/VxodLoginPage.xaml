@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP.Views.VxodLoginPage">
+
+
+
+    <StackLayout HorizontalOptions="CenterAndExpand" >
+
+        <Label Text="Войти" FontSize="40" HorizontalTextAlignment="Center" FontFamily="Metropolis" TextColor="#4a4B4D" Margin="0,50,0,0"/>
+
+        <Label Text="Введите данные для входа" HorizontalTextAlignment="Center" FontFamily="Metropolis" TextColor="#7c7d7e" Margin="0,10,0,0" HorizontalOptions="Center"/>
+
+        <Frame CornerRadius="30" Margin="15,40,15,0" BackgroundColor="#f2f2f2" HasShadow="False" WidthRequest="350" HeightRequest="20">
+            <Entry HorizontalTextAlignment="Start" FontSize="14"  PlaceholderColor="#b6b7b7" Placeholder="Введите Email" Margin="15,-30,0,-30" TextColor="Black"/>
+        </Frame>
+
+        <Frame CornerRadius="30" BackgroundColor="#F2F2F2" HasShadow="False" WidthRequest="350" HeightRequest="20" Margin="15,20,15,0">
+            <Entry HorizontalTextAlignment="Start" FontSize="14" PlaceholderColor="#B6B7B7" TextColor="Black" Placeholder="Введите ваш пароль" Margin="15,-30,0,-30"/>
+        </Frame>
+
+
+        <StackLayout  HorizontalOptions="Center"  Margin="0,15,0,0">
+            <Button BackgroundColor="#fc6011" TextColor="White" WidthRequest="350" HeightRequest="60" HorizontalOptions="Center" CornerRadius="30" Text="Войти"  Margin="0,0,0,0" Clicked="Button_Clicked_1"/>
+            <Label Text="Забыли пароль?" HorizontalTextAlignment="Center" FontFamily="Metropolis" TextColor="#7c7d7e" Margin="0,20,0,0" HorizontalOptions="Center"/>
+            <Label Text="Вы можете войти через:" HorizontalTextAlignment="Center" FontFamily="Metropolis" TextColor="#7c7d7e" Margin="0,30,0,0" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout>
+            <Button BackgroundColor="#367fc8" TextColor="White" WidthRequest="350" HeightRequest="60" HorizontalOptions="Center" CornerRadius="30" Text="Войти через Google"  Margin="0,15,0,0"/>
+        </StackLayout>
+
+        
+
+        <Button BackgroundColor="#dd4b39" TextColor="White" WidthRequest="350" HeightRequest="60" HorizontalOptions="Center" CornerRadius="30" Text="Войти через Яндекс"  Margin="0,15,0,0"/>
+
+
+        <Label Text="Еще нет аккаунта?" FontSize="15" FontFamily="Cabin" TextColor="#7c7d7e" Margin="0,20,0,0" HorizontalOptions="Center"  />
+        <Button Text="Регистрация"  FontSize="13" FontFamily="Cabin" BackgroundColor="White" TextColor="#fc6011" Margin="0,-10,0,0" HorizontalOptions="Center" CornerRadius="25" Clicked="Button_Clicked"/>
+
+        <Image Source="google" Margin="-185,-219,15,0" />
+        <Image Source="yndex" Margin="-195,50,0,10"/>
+        
+    </StackLayout>
+</ContentPage>

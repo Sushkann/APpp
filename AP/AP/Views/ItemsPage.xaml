@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AP.Views.ItemsPage"
+             Title="Цели"
+             xmlns:local="clr-namespace:AP.ViewModels"  
+             xmlns:model="clr-namespace:AP.Models" x:DataType="local:ItemsViewModel"
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="pplluuss.png" Command="{Binding AddItemCommand}" />
+    </ContentPage.ToolbarItems>
+    <!--
+      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
+    
+
+    <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    
+                    <StackLayout Padding="10" x:DataType="model:Item">
+
+                        <StackLayout>
+                            <Frame CornerRadius="25" BackgroundColor="NavajoWhite" Margin="5,0,5,15" HeightRequest="120">
+                                <Label Text="Цель:" LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" FontAttributes="Bold"/>
+                            </Frame>
+                            <Label Text="{Binding Text}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" FontAttributes="Bold" Margin="85,-160,15,15" TextColor="Red"/>
+
+                            <Label Text="Дата окончания:" LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" FontAttributes="Bold" Margin="25,-10,15,15"/>
+
+                            <Label Text="{Binding Date}"
+                               LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" FontAttributes="Bold" Margin="165,-41,15,15"/>
+
+                            <Label Text="    Важность :"  LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" FontAttributes="Bold" Margin="10,-10,15,15"/>
+
+                            <Label Text="{Binding Importance}"
+                                LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" FontAttributes="Bold" Margin="125,-41,15,15"/>
+
+                            <Label Text="Необходимая сумма:"  LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" FontAttributes="Bold" Margin="25,-10,15,15"/>
+
+                            <Label Text="{Binding Description}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" Margin="195,-41,15,15"/>
+                            
+                        </StackLayout>
+
+                        <StackLayout>
+
+                            <Label Text="Откладываем " Margin="15,15,15,5" LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16"/>
+
+                            <Label Text="555 руб / день" Margin="245,-35,15,5" LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16"/>
+
+                            <Label Text="Оcталось копить" LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" Margin="15,5,15,15"/>
+
+                            <Label Text="15 дней" Margin="285,-45,15,5" LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" TextColor="Green"/>
+
+
+                            <Line X1="340"
+                    Y1="5"
+                    X2="5"
+                    Y2="5"
+                    Stroke="black" Margin="10,-40,15,25" />
+
+
+                        </StackLayout>
+                        <StackLayout>
+                            <Line X1="340"
+                    Y1="5"
+                    X2="5"
+                    Y2="5"
+                    Stroke="black" Margin="10,-5,15,0" />
+                        </StackLayout>
+                       
+
+
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		
+                                CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>
